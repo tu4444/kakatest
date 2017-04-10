@@ -1,0 +1,74 @@
+<form>
+	<fieldset name='basic'>
+	<field name="id"
+		 type="text"
+		 label="ID"
+		 description="說明"
+		 readonly="true"
+		  />		
+	<field name="title"
+		 type="text"
+		 label="標題"
+		 description="說明"
+		 class="require"
+		 required="true"
+		  />
+<!--id不填，會自動給預設，default給預設值
+	 validate="email"驗證email
+-->
+	<field name="alias"
+		 type="text"
+		 label="alias"
+		 description="說明"
+		 class="span5"
+
+		  />
+	<field name="catid"
+		 type="category"
+		 label="分類"
+		 description="說明"
+		 class="span5"
+		 extension="com_blog"
+		  />		  
+	<field name="created"
+		 type="calendar"
+		 label="created"
+		 description="說明"
+		 />
+	<field name="author"
+		 type="user"
+		 label="author"
+		 description="說明"
+		 />		 
+	<field name="state"
+		 type="radio"
+		 label="state"
+		 description="說明"
+		 default="1"
+		 class="btn-group"
+		 >
+		 <option value="0">關閉</option>
+		 <option value="1">啟動</option>
+	</field>
+	<!--type=list下拉選單
+		type=radio單選按鈕
+		 class="btn-group"像joomla3
+		 type="textarea"
+		 class="span6"	//bootstrap語法
+		 class="btn-group" 給radio用
+		 rows="15"
+	-->
+	<field name="introtext"
+		 type="editor"
+		 label="introtext"
+		 description="摘要"
+		 class="span6"
+		 rows="15"
+		 />
+	<field name="fulltext"
+		 type="editor"
+		 label="fulltext"
+		 description="全文"
+		 />	
+	</fieldset>
+</form>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_news</name>
+
+	<files>
+		<filename module="mod_news">mod_news.php</filename>
+		<!--模組入口-->
+	</files>
+
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="catid"
+					type="category"
+					extension="com_blog"
+					multiple="true"
+					size="10"
+					default=""
+					label="MOD_NEWS_SELECT_CATEGORY"
+					description="MOD_NEWS_SELECT_CATEGORY"
+				>
+					<option value="">JOPTION_ALL_CATEGORIES</option>
+				</field>
+
+				<field
+					name="count"
+					type="text"
+					default="5"
+					label="MOD_LATEST_NEWS_FIELD_COUNT_LABEL"
+					description="MOD_LATEST_NEWS_FIELD_COUNT_DESC" />
+
+				<field
+					name="show_featured"
+					type="list"
+					default=""
+					label="MOD_LATEST_NEWS_FIELD_FEATURED_LABEL"
+					description="MOD_LATEST_NEWS_FIELD_FEATURED_DESC"
+				>
+					<option value="">JSHOW</option>
+					<option value="0">JHIDE</option>
+					<option value="1">MOD_LATEST_NEWS_VALUE_ONLY_SHOW_FEATURED</option>
+				</field>
+
+				<field
+					name="ordering"
+					type="list"
+					label="Order"
+				>
+					<option value="article.id">ID</option>
+					<option value="article.created">Created</option>
+					<option value="article.title">Title</option>
+					<option value="RAND()">Random</option>
+				</field>
+
+				<field
+					name="direction"
+					type="list"
+					label="Direction"
+				>
+					<option value="ASC">ASC</option>
+					<option value="DESC">DESC</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC"
+				>
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static"
+				>
+					<option value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

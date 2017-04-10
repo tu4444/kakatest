@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+	<name>plg_system_sakura</name>
+	
+	<files>
+		<filename plugin="sakura">sakura.php</filename>
+	</files>
+
+
+</extension>
